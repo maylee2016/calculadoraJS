@@ -83,6 +83,26 @@ botonDivision.addEventListener('click', function () {
   operacion = '/'
   display.innerHTML = '';
 });
+const botonRaizCuadrada = document.getElementById('raizCuadrada');
+botonRaizCuadrada.addEventListener('click', function () {  
+  valorUno = parseFloat(display.innerHTML);
+  operacion = 'raiz'
+  //para ver la solucion se debe poner igual
+  
+});
+const botonExponente = document.getElementById('exponente');
+botonExponente.addEventListener('click', function () {  
+  valorUno = parseFloat(display.innerHTML);
+  operacion = 'expo'
+  resolverTotal(); 
+  
+});
+const botonPorcentaje = document.getElementById('%');
+botonPorcentaje.addEventListener('click', function () {  
+  valorUno = parseFloat(display.innerHTML);
+  operacion = '%'
+  resolverTotal(); 
+});
 
 const botonIgual = document.getElementById('=');
 botonIgual.addEventListener('click', function () {  
@@ -94,7 +114,7 @@ botonIgual.addEventListener('click', function () {
 
 //resolver total
 function resolverTotal() {
-  var res = 0;
+  var res = 0;  
   switch(operacion){
     case '+':
       res= parseFloat(valorUno) +  parseFloat(valorFinal);
@@ -107,6 +127,15 @@ function resolverTotal() {
       break;
     case '/':
       res= parseFloat(valorUno) /  parseFloat(valorFinal);
+      break;
+    case 'raiz':      
+      res= Math.sqrt(valorUno) ;
+      break;
+    case 'expo':      
+      res= Math.pow(parseFloat(valorUno), 2 ) ;
+      break;
+    case '%':      
+      res= (parseFloat(valorUno) / 100) ;
       break;
   }
   display.innerHTML = res.toFixed(2);
