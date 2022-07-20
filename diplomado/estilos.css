@@ -1,12 +1,14 @@
 html, body {
-  padding: 30px;
+  padding: 20px;
   
 }
+
 button {
   padding: 20px;
   background: rgb(76, 129, 128); 
-  font-size: 15px;
+  font-size: 17px;
   font-weight: bold;
+  border-radius: 5px;
 }
 
 #display {
@@ -21,4 +23,8 @@ button {
 
 .total {
   background: rgb(9, 74, 112); 
+}
+.calCientifica {
+  font-size: 15px;
+  padding: 9px;
 }

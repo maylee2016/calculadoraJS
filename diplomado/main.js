@@ -87,7 +87,7 @@ const botonRaizCuadrada = document.getElementById('raizCuadrada');
 botonRaizCuadrada.addEventListener('click', function () {  
   valorUno = parseFloat(display.innerHTML);
   operacion = 'raiz'
-  //para ver la solucion se debe poner igual
+  resolverTotal(); 
   
 });
 const botonExponente = document.getElementById('exponente');
@@ -101,6 +101,24 @@ const botonPorcentaje = document.getElementById('%');
 botonPorcentaje.addEventListener('click', function () {  
   valorUno = parseFloat(display.innerHTML);
   operacion = '%'
+  resolverTotal(); 
+});
+const botonCos = document.getElementById('cos');
+botonCos.addEventListener('click', function () {  
+  valorUno = parseFloat(display.innerHTML);
+  operacion = 'cos'
+  resolverTotal(); 
+});
+const botonSin = document.getElementById('sin');
+botonSin.addEventListener('click', function () {  
+  valorUno = parseFloat(display.innerHTML);
+  operacion = 'sin'
+  resolverTotal(); 
+});
+const botonTan = document.getElementById('tan');
+botonTan.addEventListener('click', function () {  
+  valorUno = parseFloat(display.innerHTML);
+  operacion = 'tan'
   resolverTotal(); 
 });
 
@@ -136,6 +154,15 @@ function resolverTotal() {
       break;
     case '%':      
       res= (parseFloat(valorUno) / 100) ;
+      break;
+    case 'cos':      
+      res= Math.cos(parseFloat(valorUno)) ;
+      break;
+    case 'sin':      
+      res= Math.sin(parseFloat(valorUno)) ;
+      break;
+    case 'tan':      
+      res= Math.tan(parseFloat(valorUno)) ;
       break;
   }
   display.innerHTML = res.toFixed(2);
