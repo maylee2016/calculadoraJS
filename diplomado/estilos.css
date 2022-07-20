@@ -1,0 +1,24 @@
+html, body {
+  padding: 30px;
+  
+}
+button {
+  padding: 20px;
+  background: rgb(76, 129, 128); 
+  font-size: 15px;
+  font-weight: bold;
+}
+
+#display {
+  width: 300px;
+  padding: 5px;
+  background: #DDD; 
+  margin-bottom: 10px;
+  height: 80px;
+  text-align: right;
+  font-size: 50px;
+}
+
+.total {
+  background: rgb(9, 74, 112); 
+}
